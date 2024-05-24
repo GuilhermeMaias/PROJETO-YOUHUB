@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Vídeos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="LOGO.PNG" alt="Logo" class="logo">
+            <div class="category-links" id="categoryLinks">
+                <a href="#" onclick="showCategory('series')">Séries</a>
+                <a href="#" onclick="showCategory('estudos')">Estudos</a>
+                <a href="#" onclick="showCategory('entretenimento')">Entretenimento</a>
+            </div>
+            <h1>Bem Vindo A Sua Galeria de Vídeos</h1>
+            <div class="nav-links">
+                <a href="index.html">Página Inicial</a>
+            </div>
+        </div>
+    </header>
+    <main class="container">
+        <form id="videoForm">
+            <label for="category">Categoria:</label>
+            <select id="category" name="category" required>
+                <option value="">Selecione uma categoria</option>
+                <option value="series">Séries</option>
+                <option value="estudos">Estudos</option>
+                <option value="entretenimento">Entretenimento</option>
+            </select>
+            <br><br>
+            <div class="form-group">
+                <label for="videoUrl">URL do Vídeo:</label>
+                <input type="url" id="videoUrl" name="videoUrl" placeholder="Insira a URL do vídeo" required>
+                <button type="submit">Adicionar Vídeo</button>
+            </div>
+        </form>
+
+        <div class="menu">
+            <h2>Gerenciar Categorias</h2>
+            <form id="categoryForm">
+                <label for="newCategory">Nova Categoria:</label>
+                <input type="text" id="newCategory" placeholder="Nova Categoria" required>
+                <button type="submit">Adicionar Categoria</button>
+            </form>
+            <form id="deleteCategoryForm">
+                <label for="deleteCategory">Remover Categoria:</label>
+                <select id="deleteCategory" required>
+                    <option value="">Selecione uma categoria</option>
+                    <option value="series">Séries</option>
+                    <option value="estudos">Estudos</option>
+                    <option value="entretenimento">Entretenimento</option>
+                </select>
+                <button type="submit">Remover Categoria</button>
+            </form>
+        </div>
+
+        <div id="videosContainer" class="videos">
+            <!-- Conteúdo de vídeo será adicionado dinamicamente aqui -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Entre em contato: YOUHUB@EMAIL.COM</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
